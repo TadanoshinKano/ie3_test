@@ -1,101 +1,92 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="flex flex-col min-h-screen">
+      {/* メインビジュアル */}
+      <section className="relative h-screen flex items-center justify-center text-white">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/placeholder.svg?height=1080&width=1920"
+          alt="AI学習と活用を象徴する画像"
+          layout="fill"
+          objectFit="cover"
+          className="z-0"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 bg-navy-blue opacity-50 z-10"></div>
+        <div className="relative z-20 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">AIを、もっと身近に。</h1>
+          <p className="text-xl md:text-2xl">IE3-Group - あなたのAI活用をサポートします</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* キービジョン・メッセージ */}
+      <section className="bg-white py-16 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">AIを広める、未来を創る</h2>
+          <p className="text-xl text-gray-600 mb-8">IE3-Groupは、AIの力を活用して、個人と企業の成長を支援します。</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/services/individual" className="bg-light-blue text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-navy-blue transition-colors">
+              個人向け研修
+            </Link>
+            <Link href="/services/corporate" className="bg-light-blue text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-navy-blue transition-colors">
+              法人向け研修
+            </Link>
+            <Link href="/services/consulting" className="bg-light-blue text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-navy-blue transition-colors">
+              AI導入コンサル
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 最新情報・お知らせ */}
+      <section className="bg-gray-100 py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-navy-blue mb-8 text-center">最新情報・お知らせ</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-navy-blue mb-2">新規講座開始</h3>
+              <p className="text-gray-600">AI基礎から応用まで、幅広いレベルに対応した新しい講座を開講しました。</p>
+              <Link href="/news/new-course" className="text-light-blue hover:underline mt-4 inline-block">詳細を見る</Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-navy-blue mb-2">イベント開催</h3>
+              <p className="text-gray-600">来月、AIの最新トレンドを学ぶ大規模カンファレンスを開催します。</p>
+              <Link href="/news/upcoming-event" className="text-light-blue hover:underline mt-4 inline-block">詳細を見る</Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-navy-blue mb-2">導入事例</h3>
+              <p className="text-gray-600">大手製造業でのAI導入により生産効率が30%向上した事例を公開しました。</p>
+              <Link href="/news/case-study" className="text-light-blue hover:underline mt-4 inline-block">詳細を見る</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* クイックアクセスボタン */}
+      <section className="bg-white py-16 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-navy-blue mb-8">サービスをお探しの方へ</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <Link href="/services/individual" className="block bg-navy-blue text-white px-6 py-4 rounded-lg text-xl font-semibold hover:bg-light-blue transition-colors">
+                個人向けAI研修
+              </Link>
+            </div>
+            <div>
+              <Link href="/services/corporate" className="block bg-navy-blue text-white px-6 py-4 rounded-lg text-xl font-semibold hover:bg-light-blue transition-colors">
+                法人向けAI研修
+              </Link>
+            </div>
+            <div>
+              <Link href="/services/consulting" className="block bg-navy-blue text-white px-6 py-4 rounded-lg text-xl font-semibold hover:bg-light-blue transition-colors">
+                AI導入コンサルティング
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
+
