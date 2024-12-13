@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">IE3-Group</h3>
+            <h3 className="text-xl font-bold mb-4">IE3-Group Inc.</h3>
             <p className="text-sm">AIを広める - 社会に貢献する新時代のスキル</p>
           </div>
           <div>
@@ -28,13 +28,15 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">お問い合わせ</h4>
-            <p className="text-sm">〒150-0041　東京都渋谷区神南１丁目１１−４　ＦＰＧリンクス神南 5階</p>
+            <p className="text-sm">〒150-0041</p>
+            <p className="text-sm">東京都渋谷区神南１丁目１１−４</p>
+            <p className="text-sm">ＦＰＧリンクス神南 5階</p>
             <p className="text-sm mt-2">TEL: 090-9309-6601</p>
             <p className="text-sm">Email: info@ie3-group.com</p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-sm">&copy; 2024 IE3-Group. All rights reserved.</p>
+          <p className="text-sm">&copy; 2024 IE3-Group Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

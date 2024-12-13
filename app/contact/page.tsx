@@ -34,20 +34,20 @@ export default function Contact() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-navy-blue mb-8 text-center">お問い合わせ</h1>
+    <div className="container mx-auto px-4 py-12 bg-gradient-to-br from-white to-blue-50">
+      <h1 className="text-5xl font-bold text-navy-blue mb-12 text-center animate-[fadeInUp_1s_ease] transform hover:scale-105 transition-all duration-500">お問い合わせ</h1>
 
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>お問い合わせフォーム</CardTitle>
-          <CardDescription>以下のフォームに必要事項をご記入ください。</CardDescription>
+      <Card className="mb-12 hover:shadow-2xl transition-all duration-500 bg-gradient-to-r from-white to-blue-50 max-w-4xl mx-auto">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-3xl text-navy-blue bg-gradient-to-r from-navy-blue to-light-blue bg-clip-text text-transparent">お問い合わせフォーム</CardTitle>
+          <CardDescription className="text-lg">以下のフォームに必要事項をご記入ください。</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Label htmlFor="purpose" className="flex-shrink-0 w-40">お問い合わせ目的</Label>
+            <div className="grid grid-cols-[140px,1fr,auto] items-center gap-4 group">
+              <Label htmlFor="purpose" className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">お問い合わせ目的</Label>
               <Select onValueChange={handleSelectChange} required>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="border-light-blue/30 hover:border-light-blue transition-colors duration-300">
                   <SelectValue placeholder="選択してください" />
                 </SelectTrigger>
                 <SelectContent>
@@ -57,58 +57,60 @@ export default function Contact() {
                   <SelectItem value="other">その他</SelectItem>
                 </SelectContent>
               </Select>
-              <span className="text-red-500">必須</span>
+              <span className="text-red-500 animate-pulse text-xs">*必須</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Label htmlFor="company" className="flex-shrink-0 w-40">会社名</Label>
-              <Input id="company" name="company" onChange={handleChange} />
+            <div className="grid grid-cols-[140px,1fr,auto] items-center gap-4 group">
+              <Label htmlFor="company" className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">会社名</Label>
+              <Input id="company" name="company" onChange={handleChange} className="border-light-blue/30 hover:border-light-blue transition-colors duration-300" />
+              <span className="invisible">空白</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Label htmlFor="name" className="flex-shrink-0 w-40">お名前</Label>
-              <Input id="name" name="name" onChange={handleChange} required />
-              <span className="text-red-500">必須</span>
+            <div className="grid grid-cols-[140px,1fr,auto] items-center gap-4 group">
+              <Label htmlFor="name" className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">お名前</Label>
+              <Input id="name" name="name" onChange={handleChange} required className="border-light-blue/30 hover:border-light-blue transition-colors duration-300" />
+              <span className="text-red-500 animate-pulse text-xs">*必須</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Label htmlFor="phone" className="flex-shrink-0 w-40">電話番号</Label>
-              <Input id="phone" name="phone" type="tel" onChange={handleChange} />
+            <div className="grid grid-cols-[140px,1fr,auto] items-center gap-4 group">
+              <Label htmlFor="phone" className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">電話番号</Label>
+              <Input id="phone" name="phone" type="tel" onChange={handleChange} className="border-light-blue/30 hover:border-light-blue transition-colors duration-300" />
+              <span className="invisible">空白</span>
             </div>
-            <div className="flex items-start space-x-2">
-              <Label htmlFor="message" className="flex-shrink-0 w-40 mt-2">お問い合わせ内容</Label>
-              <Textarea id="message" name="message" onChange={handleChange} required className="min-h-[100px]" />
-              <span className="text-red-500 mt-2">必須</span>
+            <div className="grid grid-cols-[140px,1fr,auto] items-start gap-4 group">
+              <Label htmlFor="message" className="text-navy-blue group-hover:text-light-blue transition-colors duration-300 pt-2">お問い合わせ内容</Label>
+              <Textarea id="message" name="message" onChange={handleChange} required className="min-h-[120px] border-light-blue/30 hover:border-light-blue transition-colors duration-300" />
+              <span className="text-red-500 animate-pulse text-xs pt-2">*必須</span>
             </div>
-            <Button type="submit" className="w-full">送信</Button>
+            <Button type="submit" className="w-full bg-light-blue hover:bg-navy-blue transition-all duration-300 transform hover:scale-105">送信</Button>
           </form>
         </CardContent>
       </Card>
 
-      <Card className="mb-8">
+      <Card className="mb-12 hover:shadow-2xl transition-all duration-500 bg-gradient-to-r from-white to-blue-50 max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle>よくある質問 (FAQ)</CardTitle>
+          <CardTitle className="text-3xl text-navy-blue bg-gradient-to-r from-navy-blue to-light-blue bg-clip-text text-transparent">よくある質問 (FAQ)</CardTitle>
         </CardHeader>
         <CardContent>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>受講条件はありますか？</AccordionTrigger>
-              <AccordionContent>
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="item-1" className="border-light-blue/30 hover:border-light-blue transition-colors duration-300">
+              <AccordionTrigger className="text-navy-blue hover:text-light-blue transition-colors duration-300">受講条件はありますか？</AccordionTrigger>
+              <AccordionContent className="text-gray-700">
                 個人向けAI研修の基礎コースには特別な条件はありません。ただし、中級・上級コースではプログラミングの基礎知識が必要となる場合があります。法人向け研修は、お客様のニーズに合わせてカスタマイズいたしますので、事前にご相談ください。
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>料金はどのくらいですか？</AccordionTrigger>
-              <AccordionContent>
-                料金は研修の種類、期間、内容によって異なります。個人向けコースは1回あたり10,000円〜、法人向けパッケージは100,000円〜となっています。詳細は個別にお問い合わせください。
+            <AccordionItem value="item-2" className="border-light-blue/30 hover:border-light-blue transition-colors duration-300">
+              <AccordionTrigger className="text-navy-blue hover:text-light-blue transition-colors duration-300">料金はどのくらいですか？</AccordionTrigger>
+              <AccordionContent className="text-gray-700">
+                料金は研修の種類、期間、内容によって異なります。詳細はお問い合わせください。
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>カリキュラムの内容を教えてください。</AccordionTrigger>
-              <AccordionContent>
-                カリキュラムはAIの基礎理論から実践的なアプリケーション開発まで幅広くカバーしています。具体的には、機械学習、ディープラーニング、自然言語処理、コンピュータビジョンなどの分野を扱います。各コースの詳細なシラバスはお問い合わせいただければ提供いたします。
+            <AccordionItem value="item-3" className="border-light-blue/30 hover:border-light-blue transition-colors duration-300">
+              <AccordionTrigger className="text-navy-blue hover:text-light-blue transition-colors duration-300">カリキュラムの内容を教えてください。</AccordionTrigger>
+              <AccordionContent className="text-gray-700">
+                カリキュラムはAIの基礎理論から実践的なアプリケーション開発まで幅広くカバーしています。各コースの詳細なシラバスはお問い合わせいただければ提供いたします。
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>コンサルティングの期間はどのくらいですか？</AccordionTrigger>
-              <AccordionContent>
+            <AccordionItem value="item-4" className="border-light-blue/30 hover:border-light-blue transition-colors duration-300">
+              <AccordionTrigger className="text-navy-blue hover:text-light-blue transition-colors duration-300">コンサルティングの期間はどのくらいですか？</AccordionTrigger>
+              <AccordionContent className="text-gray-700">
                 コンサルティングの期間は、プロジェクトの規模や複雑さによって異なります。短期のアドバイザリーサービスから、長期的な導入支援まで柔軟に対応しています。一般的な期間は3ヶ月〜1年程度ですが、お客様のニーズに合わせて調整いたします。
               </AccordionContent>
             </AccordionItem>
@@ -116,17 +118,25 @@ export default function Contact() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="hover:shadow-2xl transition-all duration-500 bg-gradient-to-r from-white to-blue-50 max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle>連絡先・アクセス情報</CardTitle>
+          <CardTitle className="text-3xl text-navy-blue bg-gradient-to-r from-navy-blue to-light-blue bg-clip-text text-transparent">連絡先・アクセス情報</CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="mb-2">メールアドレス: <a href="mailto:info@ie3-group.com" className="text-light-blue hover:underline">info@ie3-group.com</a></p>
-          <p className="mb-2">電話番号: <a href="tel:090-9309-6601" className="text-light-blue hover:underline">090-9309-6601</a></p>
-          <p>住所: 〒150-0041　東京都渋谷区神南１丁目１１−４　ＦＰＧリンクス神南 5階</p>
+        <CardContent className="space-y-4">
+          <p className="flex items-center space-x-2 group">
+            <span className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">メールアドレス:</span>
+            <a href="mailto:info@ie3-group.com" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">info@ie3-group.com</a>
+          </p>
+          <p className="flex items-center space-x-2 group">
+            <span className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">電話番号:</span>
+            <a href="tel:090-9309-6601" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">090-9309-6601</a>
+          </p>
+          <p className="group">
+            <span className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">住所:</span>
+            <span className="ml-2">〒150-0041　東京都渋谷区神南１丁目１１−４　ＦＰＧリンクス神南 5階</span>
+          </p>
         </CardContent>
       </Card>
     </div>
   )
 }
-
