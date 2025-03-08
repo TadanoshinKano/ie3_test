@@ -129,7 +129,7 @@ export default function Contact() {
           </p>
           <p className="flex items-center space-x-2 group">
             <span className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">電話番号:</span>
-            <a href="tel:090-9309-6601" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">090-9309-6601</a>
+            <a href="tel:03-6277-6564" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">03-6277-6564</a>
           </p>
           <p className="group">
             <span className="text-navy-blue group-hover:text-light-blue transition-colors duration-300">住所:</span>

@@ -48,7 +48,7 @@ export default function AboutUs() {
               <tr className="hover:bg-blue-50 transition-colors duration-300">
                 <td className="py-4 px-8 font-semibold text-navy-blue">電話番号</td>
                 <td className="py-4 px-8">
-                  <a href="tel:090-9309-6601" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">090-9309-6601</a>
+                  <a href="tel:03-6277-6564" className="text-light-blue hover:text-navy-blue hover:underline transition-colors duration-300">03-6277-6564</a>
                 </td>
               </tr>
             </tbody>

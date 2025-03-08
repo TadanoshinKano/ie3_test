@@ -31,12 +31,12 @@ export default function Footer() {
             <p className="text-sm">〒150-0041</p>
             <p className="text-sm">東京都渋谷区神南１丁目１１−４</p>
             <p className="text-sm">ＦＰＧリンクス神南 5階</p>
-            <p className="text-sm mt-2">TEL: 090-9309-6601</p>
+            <p className="text-sm mt-2">TEL: 03-6277-6564</p>
             <p className="text-sm">Email: info@ie3-group.com</p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-sm">&copy; 2024 IE3-Group Inc. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 IE3-Group Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
