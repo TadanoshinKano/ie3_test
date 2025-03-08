@@ -16,6 +16,7 @@ export default function Careers() {
             <div className="relative w-full md:w-1/2 h-[300px] rounded-lg overflow-hidden">
               <Image
                 src="/careers-message.jpg"
+                // src="/kano.jpg"
                 alt="採用メッセージ"
                 fill
                 style={{ objectFit: 'cover' }}

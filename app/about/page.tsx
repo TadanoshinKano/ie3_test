@@ -39,10 +39,6 @@ export default function AboutUs() {
                 <td className="py-4 px-8">〒150-0041<br />
                   東京都渋谷区神南１丁目１１−４　ＦＰＧリンクス神南 5階</td>
               </tr>
-              <tr className="border-b hover:bg-blue-50 transition-colors duration-300">
-                <td className="py-4 px-8 font-semibold text-navy-blue">代表取締役</td>
-                <td className="py-4 px-8">狩野 真之心</td>
-              </tr>
               <tr className="border-b bg-gray-50 hover:bg-blue-50 transition-colors duration-300">
                 <td className="py-4 px-8 font-semibold text-navy-blue">メールアドレス</td>
                 <td className="py-4 px-8">
