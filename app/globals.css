@@ -33,6 +33,10 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+    
+    /* カスタムフォント変数 */
+    --font-outfit: 'Outfit', sans-serif;
+    --font-space: 'Space Grotesk', monospace;
   }
  
   .dark {
@@ -73,22 +77,181 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* 見出し用のフォントスタイル */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-space);
+  }
 }
 
-/* カスタムスタイル */
+/* カスタムカラー */
 .bg-navy-blue {
-  background-color: #1a365d;
+  background-color: #0f172a;
 }
 
 .text-navy-blue {
-  color: #1a365d;
+  color: #0f172a;
 }
 
 .bg-light-blue {
-  background-color: #63b3ed;
+  background-color: #38bdf8;
 }
 
 .text-light-blue {
-  color: #63b3ed;
+  color: #38bdf8;
+}
+
+.bg-deep-purple {
+  background-color: #7c3aed;
+}
+
+.text-deep-purple {
+  color: #7c3aed;
+}
+
+.bg-neon-blue {
+  background-color: #00f5ff;
+}
+
+.text-neon-blue {
+  color: #00f5ff;
+}
+
+.bg-tech-gray {
+  background-color: #94a3b8;
+}
+
+.text-tech-gray {
+  color: #94a3b8;
+}
+
+.bg-dark-bg {
+  background-color: #020617;
+}
+
+/* グラデーション背景 */
+.bg-tech-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #0284c7 100%);
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #7c3aed 100%);
+}
+
+.bg-cyber-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #0891b2 50%, #7c3aed 100%);
+}
+
+/* テキストグラデーション */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #38bdf8, #7c3aed);
+}
+
+/* ネオンエフェクト */
+.neon-text {
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.5), 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.neon-box {
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5), 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* グラスモーフィズム */
+.glass-effect {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+/* テキストアンダーライン効果 */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* シマーエフェクト */
+.shimmer-effect {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* キーフレームアニメーション */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* アニメーションクラス */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-shine {
+  animation: shine 1.2s linear infinite;
 }
 

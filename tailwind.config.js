@@ -16,8 +16,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        'navy-blue': '#1a365d',
-        'light-blue': '#63b3ed',
+        'navy-blue': '#0f172a',
+        'light-blue': '#38bdf8',
+        'deep-purple': '#7c3aed',
+        'neon-blue': '#00f5ff',
+        'tech-gray': '#94a3b8',
+        'dark-bg': '#020617',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,6 +82,37 @@ module.exports = {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(15px, 15px)' },
         },
+        glitch: {
+          '0%, 100%': { transform: 'translate(0)' },
+          '20%': { transform: 'translate(-2px, 2px)' },
+          '40%': { transform: 'translate(-2px, -2px)' },
+          '60%': { transform: 'translate(2px, 2px)' },
+          '80%': { transform: 'translate(2px, -2px)' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -85,6 +120,18 @@ module.exports = {
         'float1': 'float1 6s ease-in-out infinite',
         'float2': 'float2 8s ease-in-out infinite',
         'float3': 'float3 7s ease-in-out infinite',
+        'glitch': 'glitch 0.3s ease infinite',
+        'pulse': 'pulse 2s ease-in-out infinite',
+        'slideRight': 'slideRight 3s linear infinite',
+        'slideLeft': 'slideLeft 3s linear infinite',
+        'gradient': 'gradient 8s ease infinite',
+        'fadeInUp': 'fadeInUp 1s ease-out',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'tech-pattern': "url('/images/tech-pattern.svg')",
+        'cyber-grid': "linear-gradient(to right, #38bdf8 1px, transparent 1px), linear-gradient(to bottom, #38bdf8 1px, transparent 1px)",
       },
     },
   },
